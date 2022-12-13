@@ -48,10 +48,10 @@ const NavBar = () => {
           <a className="btn btn-ghost normal-case text-xl">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img src="https://placeimg.com/80/80/people" />
+          <img src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1670939243/Portfolio/DSC_7989_xdncll.jpg" />
         </div>
       </label>
-            Brian Koskei</a>
+          <p className="text-"> Brian Koskei | Frontend Developer</p> </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -73,9 +73,9 @@ const NavBar = () => {
               </li>
           </ul>
         </div>
-        <div className="navbar-end">
+        {/* <div className="navbar-end">
           <a className="btn">Get started</a>
-        </div>
+        </div> */}
       </div>
     </>
   );
