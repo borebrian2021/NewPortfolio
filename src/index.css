@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .border-tweaks{
+    border-color: yellow blue red white;
+    border-style: solid;
+    border-width: 10px 0 10px 40px;
+} */

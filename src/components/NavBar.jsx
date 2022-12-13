@@ -4,7 +4,7 @@ import React,{memo} from "react";
 const NavBar = () => {
   return (
     <>
-      <div className="navbar bg-base-100 shadow-md">
+      <div className="navbar  shadow-md bg-[#31313a] ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -25,9 +25,9 @@ const NavBar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 text-white rounded-box w-52"
             >
-              <li className="hover:bg-slate-300 active:bg-slate-200 focus:bg-slate-200">
+              <li className="hover:bg-slate-300 active:bg-slate-200 focus:bg-slate-200 text-white">
                 <a>About</a>
               </li>
             
@@ -51,7 +51,7 @@ const NavBar = () => {
           <img src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1670939243/Portfolio/DSC_7989_xdncll.jpg" />
         </div>
       </label>
-          <p className="text-"> Brian Koskei | Frontend Developer</p> </a>
+          <p className="text-white text-[13px]"> Brian Koskei | Frontend Developer</p> </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
