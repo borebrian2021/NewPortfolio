@@ -3,9 +3,9 @@ import React from "react";
 const BodySection = () => {
   return (
     <div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 bg-[#222228]">
-      <div className=" flex justify-center w-[90%]  items-center text-center align-right">
-        <div className="w-[100%] h-[550px] flex justify-center items-center text-center align-center">
-          <div className="w-[90%] h-[90%] rounded-md  bg-[#31313a]  ">
+      <div className=" flex justify-center h-[100%] w-[100%] col-span-1  items-center text-center align-right">
+        <div className="w-[100%] h-[500px] flex justify-center items-center text-center align-center">
+          <div className="w-[90%] h-[85%] rounded-md  bg-[#31313a]  ">
             <div className="w-[100%] relative h-[30%] bg-[#31313a]  bg-url  rounded-md border-tweaks">
               <img
                 class="object-cover bg-[#31313a] h-[100%] w-[100%] rounded-t-md "
@@ -90,13 +90,32 @@ const BodySection = () => {
           </div>
         </div>
       </div>
-      <div className="">
-        <div className="tabs mt-[10%]">
-          <a className="tab tab-lifted text-white">About me</a>
-          <a className="tab tab-lifted   tab-active">Education</a>
-          <a className="tab tab-lifted  text-white">Skills</a>
-          <a className="tab tab-lifted  text-white">Projects</a>
-          <a className="tab tab-lifted  text-white">Projects</a>
+      <div className="h-[100%] w-[100%] flex justify-center col-span-3 items-center align-center">
+        <div className=" rounded-md  bg-[#31313a] w-[100%] gap-1 mr-3 h-[95%] ml-3">
+          <div className="tabs flex w-[100%] justify-center items-center align-center mt-5">
+            <a className="tab tab-lifted  tab-active">About me</a>
+            <a className="tab   text-white">Education</a>
+            <a className="tab  text-white">Skills</a>
+            <a className="tab   text-white">Projects</a>
+            <a className="tab    text-white">Projects</a>
+            <a className="tab    text-white">Testimonials</a>
+            <a className="tab first-letter: text-white">Certification</a>
+          </div>
+          <div className="w-[100%] p-[20px] flex flex-row-reverse justify-center align-center items-center">
+            <p className="text-white">
+              Building a successful product is a challenge. I am highly
+              energetic in user experience design, interfaces and web
+              development.
+            </p>
+          
+          </div>
+          <div className="w-[100%] p-[20px] flex flex-row-reverse justify-center align-center items-center">
+       
+
+            <button class="bg-orange-500 hover:bg-orange-400 btn-sm text-white font-bold  px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded-full">
+  Download CV
+</button>
+          </div>
         </div>
       </div>
     </div>
