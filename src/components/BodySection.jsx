@@ -1,6 +1,71 @@
-import React from "react";
+import React, {useState} from "react";
 
 const BodySection = () => {
+  const  [about ,setAbout]=useState(true)
+  const  [education ,setEducation]=useState(false)
+  const  [skills ,setSkills]=useState(false)
+  const  [projects ,setProjects]=useState(false)
+  const  [testimonials ,setTestimonial]=useState(false)
+  const  [cert ,setCert]=useState(false)
+
+
+  const setActiveTab=(id) =>{
+    switch (id) {
+      case 1:
+       setAbout(true)
+       setEducation(false)
+       setSkills(false)
+       setProjects(false)
+       setTestimonial(false)
+       setCert(false)
+
+        break;
+      case 2:
+        setAbout(false)
+        setEducation(true)
+        setSkills(false)
+        setProjects(false)
+        setTestimonial(false)
+        setCert(false)
+        break;
+      case 3:
+        setAbout(false)
+        setEducation(false)
+        setSkills(true)
+        setProjects(false)
+        setTestimonial(false)
+        setCert(false)
+        break;
+      case 4:
+        setAbout(false)
+        setEducation(false)
+        setSkills(false)
+        setProjects(true)
+        setTestimonial(false)
+        setCert(false)
+        break;
+      case 5:
+        setAbout(false)
+        setEducation(false)
+        setSkills(false)
+        setProjects(false)
+        setTestimonial(true)
+        setCert(false)
+        break;
+      case 6:
+        setAbout(false)
+        setEducation(false)
+        setSkills(false)
+        setProjects(false)
+        setTestimonial(false)
+        setCert(true)
+        break;
+    
+    }
+  }
+
+
+
   return (
     <div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 bg-[#222228]">
       <div className=" flex justify-center h-[100%] w-[100%] col-span-1  items-center text-center align-right">
@@ -93,28 +158,54 @@ const BodySection = () => {
       <div className="h-[100%] w-[100%] flex justify-center col-span-3 items-center align-center">
         <div className=" rounded-md  bg-[#31313a] w-[100%] gap-1 mr-3 h-[95%] ml-3">
           <div className="tabs flex w-[100%] justify-center items-center align-center mt-5">
-            <a className="tab tab-lifted  tab-active">About me</a>
-            <a className="tab   text-white">Education</a>
-            <a className="tab  text-white">Skills</a>
-            <a className="tab   text-white">Projects</a>
-            <a className="tab    text-white">Projects</a>
-            <a className="tab    text-white">Testimonials</a>
-            <a className="tab first-letter: text-white">Certification</a>
+            <a className={about? "tab tab-active tab-lifted ":"tab text-white"} onClick={()=>{setActiveTab(1)}} >About me</a>
+            <a className={education? "tab tab-active tab-lifted ":"tab text-white" } onClick={()=>{setActiveTab(2)}}>Education</a>
+            <a className={skills? "tab tab-active tab-lifted ":"tab text-white"} onClick={()=>{setActiveTab(3)}}>Skills</a>
+            <a className={projects? "tab tab-active tab-lifted ":"tab text-white"} onClick={()=>{setActiveTab(4)}}>Projects</a>
+            <a className={testimonials? "tab tab-active tab-lifted ":"tab text-white"} onClick={()=>{setActiveTab(5)}}>Testimonials</a>
+            <a className={cert? "tab tab-active tab-lifted ":"tab text-white"} onClick={()=>{setActiveTab(6)}}>Certification</a>
           </div>
-          <div className="w-[100%] p-[20px] flex flex-row-reverse justify-center align-center items-center">
+          <div className="w-[100%] p-[20px]  text-center justify-center flex  flex-col-reverse align-center items-center ">
             <p className="text-white">
               Building a successful product is a challenge. I am highly
               energetic in user experience design, interfaces and web
               development.
-            </p>
-          
+            </p>{" "}
+            <div className=" grid lg:grid-cols-3 md:grid-col-3 sm:grid-col-2 grid-col-2 w-[100%]">
+<div className="w-[100%] grid lg:grid-cols-2 md:grid-col-2 sm:grid-col-2 grid-col-2">
+  <div className="text-left flex atems-left">  <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                        />
+                      </svg></div>
+  <div className="text-right flex atems-right">Nairobi, Kenya</div>
+</div>
+
+             
+            </div>
+            <img
+              src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1671186857/Portfolio/aboutme_e0vvlj.gif"
+              className="h-[160px] align-center"
+            />
           </div>
           <div className="w-[100%] p-[20px] flex flex-row-reverse justify-center align-center items-center">
-       
-
             <button class="bg-orange-500 hover:bg-orange-400 btn-sm text-white font-bold  px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded-full">
-  Download CV
-</button>
+              Preview CV
+            </button>
           </div>
         </div>
       </div>
