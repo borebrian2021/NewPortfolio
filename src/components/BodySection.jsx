@@ -1,23 +1,23 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const BodySection = () => {
-  const  [about ,setAbout]=useState(true)
-  const  [education ,setEducation]=useState(false)
-  const  [skills ,setSkills]=useState(false)
-  const  [projects ,setProjects]=useState(false)
-  const  [testimonials ,setTestimonial]=useState(false)
-  const  [cert ,setCert]=useState(false)
+  const [about, setAbout] = useState(true)
+  const [education, setEducation] = useState(false)
+  const [skills, setSkills] = useState(false)
+  const [projects, setProjects] = useState(false)
+  const [testimonials, setTestimonial] = useState(false)
+  const [cert, setCert] = useState(false)
 
 
-  const setActiveTab=(id) =>{
+  const setActiveTab = (id) => {
     switch (id) {
       case 1:
-       setAbout(true)
-       setEducation(false)
-       setSkills(false)
-       setProjects(false)
-       setTestimonial(false)
-       setCert(false)
+        setAbout(true)
+        setEducation(false)
+        setSkills(false)
+        setProjects(false)
+        setTestimonial(false)
+        setCert(false)
 
         break;
       case 2:
@@ -60,7 +60,7 @@ const BodySection = () => {
         setTestimonial(false)
         setCert(true)
         break;
-    
+
     }
   }
 
@@ -158,50 +158,142 @@ const BodySection = () => {
       <div className="h-[100%] w-[100%] flex justify-center col-span-3 items-center align-center">
         <div className=" rounded-md  bg-[#31313a] w-[100%] gap-1 mr-3 h-[95%] ml-3">
           <div className="tabs flex w-[100%] justify-center items-center align-center mt-5">
-            <a className={about? "tab tab-active tab-lifted ":"tab text-white"} onClick={()=>{setActiveTab(1)}} >About me</a>
-            <a className={education? "tab tab-active tab-lifted ":"tab text-white" } onClick={()=>{setActiveTab(2)}}>Education</a>
-            <a className={skills? "tab tab-active tab-lifted ":"tab text-white"} onClick={()=>{setActiveTab(3)}}>Skills</a>
-            <a className={projects? "tab tab-active tab-lifted ":"tab text-white"} onClick={()=>{setActiveTab(4)}}>Projects</a>
-            <a className={testimonials? "tab tab-active tab-lifted ":"tab text-white"} onClick={()=>{setActiveTab(5)}}>Testimonials</a>
-            <a className={cert? "tab tab-active tab-lifted ":"tab text-white"} onClick={()=>{setActiveTab(6)}}>Certification</a>
+            <a className={about ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(1) }} >About me</a>
+            <a className={education ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(2) }}>Education</a>
+            <a className={skills ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(3) }}>Skills</a>
+            <a className={projects ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(4) }}>Projects</a>
+            <a className={testimonials ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(5) }}>Testimonials</a>
+            <a className={cert ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(6) }}>Certification</a>
           </div>
-          <div className="w-[100%] p-[20px]  text-center justify-center flex  flex-col-reverse align-center items-center ">
-            <p className="text-white">
-              Building a successful product is a challenge. I am highly
-              energetic in user experience design, interfaces and web
-              development.
-            </p>{" "}
-            <div className=" grid lg:grid-cols-3 md:grid-col-3 sm:grid-col-2 grid-col-2 w-[100%]">
-<div className="w-[100%] grid lg:grid-cols-2 md:grid-col-2 sm:grid-col-2 grid-col-2">
-  <div className="text-left flex atems-left">  <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="w-6 h-6"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-                        />
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
-                        />
-                      </svg></div>
-  <div className="text-right flex atems-right">Nairobi, Kenya</div>
-</div>
+          {
+            about ? <div className="w-[100%] p-[20px]  text-center justify-center flex  flex-col-reverse align-center items-center ">
+              <p className="text-white">
+                Building a successful product is a challenge. I am highly
+                energetic in user experience design, interfaces and web
+                development.
+              </p>{" "}
+              <div className=" grid lg:grid-cols-3 md:grid-col-3 sm:grid-col-2 grid-col-2 w-[100%]">
+                <div className="w-[100%] grid lg:grid-cols-2 md:grid-col-2 sm:grid-col-2 grid-col-2">
+                  <div className="text-left flex atems-left">  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                    />
+                  </svg></div>
+                  <div className="text-right flex atems-right">Nairobi, Kenya</div>
+                </div>
 
-             
+
+              </div>
+              <img
+                src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1671186857/Portfolio/aboutme_e0vvlj.gif"
+                className="h-[160px] align-center"
+              />
+            </div> : <div>
             </div>
-            <img
-              src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1671186857/Portfolio/aboutme_e0vvlj.gif"
-              className="h-[160px] align-center"
-            />
-          </div>
+          }
+          {
+            education ? <div className="w-[100%] p-[20px]  text-center justify-center flex  flex-col-reverse align-center items-center ">
+              <p className="text-white">
+                Building a successful product is a challenge. I am highly
+                energetic in user experience design, interfaces and web
+                development.
+              </p>{""}
+              <div className=" ">
+                <div className="w-[100%] grid lg:grid-cols-2 md:grid-col-2 sm:grid-col-2 grid-col-2">
+
+                  <div class='flex items-center justify-center '>  
+                  <div class="rounded-xl border p-5 shadow-md w-9/12 bg-[#e5e7eb]">
+                    <div class="flex w-full items-center justify-between border-b pb-3">
+                      <div class="flex items-center space-x-3">
+                        <div class="h-8 w-8 rounded-full bg-slate-400 bg-[url('https://i.pravatar.cc/32')]"></div>
+                        <div class="text-lg font-bold text-slate-700">University Of Kabianga</div>
+                      </div>
+                     
+                    </div>
+
+                    <div class="mt-4 mb-6">
+                     
+                      <div class="text-sm text-neutral-600">I completed four years of technical software development training where I honed my time management, team-building, and ability to design Web applications. I also acquired entrepreneurial abilities, such as business management abilities.</div>
+                    </div>
+
+                    <div>
+                      <div class="flex items-center justify-between text-slate-500">
+                        <div class="flex space-x-4 md:space-x-8">
+                          <div class="flex cursor-pointer items-center transition hover:text-slate-600">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+</svg>
+
+                            <span>2017-2021</span>
+                          </div>
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div><div class='flex items-center justify-center '>  <div class="rounded-xl border p-5 shadow-md w-9/12 bg-white">
+                    <div class="flex w-full items-center justify-between border-b pb-3">
+                      <div class="flex items-center space-x-3">
+                        <div class="h-8 w-8 rounded-full bg-slate-400 bg-[url('https://i.pravatar.cc/32')]"></div>
+                        <div class="text-lg font-bold text-slate-700">Joe Smith</div>
+                      </div>
+                      <div class="flex items-center space-x-8">
+                        <button class="rounded-2xl border bg-neutral-100 px-3 py-1 text-xs font-semibold">Category</button>
+                        <div class="text-xs text-neutral-500">2 hours ago</div>
+                      </div>
+                    </div>
+
+                    <div class="mt-4 mb-6">
+                      <div class="mb-3 text-xl font-bold">Nulla sed leo tempus, feugiat velit vel, rhoncus neque?</div>
+                      <div class="text-sm text-neutral-600">Aliquam a tristique sapien, nec bibendum urna. Maecenas convallis dignissim turpis, non suscipit mauris interdum at. Morbi sed gravida nisl, a pharetra nulla. Etiam tincidunt turpis leo, ut mollis ipsum consectetur quis. Etiam faucibus est risus, ac condimentum mauris consequat nec. Curabitur eget feugiat massa</div>
+                    </div>
+
+                    <div>
+                      <div class="flex items-center justify-between text-slate-500">
+                        <div class="flex space-x-4 md:space-x-8">
+                          <div class="flex cursor-pointer items-center transition hover:text-slate-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-1.5 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                            </svg>
+                            <span>125</span>
+                          </div>
+                          <div class="flex cursor-pointer items-center transition hover:text-slate-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-1.5 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                            <span>4</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div className="text-right flex atems-right">Nairobi, Kenya</div>
+                </div>
+
+
+              </div>
+              <img
+                src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672211775/Portfolio/animation_300_lc7bo2dh_uvjux4.gif"
+                className="h-[160px] align-center"
+              />
+            </div> : <div>
+            </div>
+          }
           <div className="w-[100%] p-[20px] flex flex-row-reverse justify-center align-center items-center">
             <button class="bg-orange-500 hover:bg-orange-400 btn-sm text-white font-bold  px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded-full">
               Preview CV
