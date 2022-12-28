@@ -1,5 +1,16 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion"
 
+const menuVariants = {
+  open: {
+    opacity: 1,
+    x: 0,
+  },
+  closed: {
+    opacity: 0,
+    x: '-100%',
+  },
+}
 const BodySection = () => {
   const [about, setAbout] = useState(true)
   const [education, setEducation] = useState(false)
@@ -67,8 +78,8 @@ const BodySection = () => {
 
 
   return (
-    <div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 bg-[#222228]">
-      <div className=" flex justify-center h-[100%] w-[100%] col-span-1  items-center text-center align-right">
+    <div className= {about ? "bg-[#222228] transition-all duration-300 ease-in-out" : "transition-all duration-300 ease-in-out grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 bg-[#222228]"}>
+      <div className={ about ?"hidden":"flex justify-center h-[100%] w-[100%] col-span-1  items-center text-center align-right"}>
         <div className="w-[100%] h-[500px] flex justify-center items-center text-center align-center">
           <div className="w-[90%] h-[85%] rounded-md  bg-[#31313a]  ">
             <div className="w-[100%] relative h-[30%] bg-[#31313a]  bg-url  rounded-md border-tweaks">
@@ -159,11 +170,10 @@ const BodySection = () => {
         <div className=" rounded-md  bg-[#31313a] w-[100%] gap-1 mr-3 h-[95%] ml-3">
           <div className="tabs flex w-[100%] justify-center items-center align-center mt-5">
             <a className={about ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(1) }} >About me</a>
-            <a className={education ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(2) }}>Education</a>
+            <a className={education ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(2) }}>Certification</a>
             <a className={skills ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(3) }}>Skills</a>
             <a className={projects ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(4) }}>Projects</a>
             <a className={testimonials ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(5) }}>Testimonials</a>
-            <a className={cert ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(6) }}>Certification</a>
           </div>
           {
             about ? <div className="w-[100%] p-[20px]  text-center justify-center flex  flex-col-reverse align-center items-center ">
@@ -207,19 +217,15 @@ const BodySection = () => {
           }
           {
             education ? <div className="w-[100%] p-[20px]  text-center justify-center flex  flex-col-reverse align-center items-center ">
-              <p className="text-white">
-                Building a successful product is a challenge. I am highly
-                energetic in user experience design, interfaces and web
-                development.
-              </p>{""}
+             
               <div className=" ">
                 <div className="w-[100%] grid lg:grid-cols-2 md:grid-col-2 sm:grid-col-2 grid-col-2">
 
-                  <div class='flex items-center justify-center '>  
+                <div class='flex items-center justify-center '>  
                   <div class="rounded-xl border p-5 shadow-md w-9/12 bg-[#e5e7eb]">
                     <div class="flex w-full items-center justify-between border-b pb-3">
                       <div class="flex items-center space-x-3">
-                        <div class="h-8 w-8 rounded-full bg-slate-400 bg-[url('https://i.pravatar.cc/32')]"></div>
+                        <div class="h-8 w-8 rounded-full bg-slate-400 bg-cover bg-[url('https://scontent.fnbo10-1.fna.fbcdn.net/v/t39.30808-6/295453090_479863670806352_4369703827020652282_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGckKzLjo7LcY8-8cqQcuFJDrot8yY8B4QOui3zJjwHhFT5RxP9rMlV2zkGL0yQdUJ42_LH0a3_3m4Ox9ueIE86&_nc_ohc=6Iga3vyEUkoAX-hzTQh&_nc_ht=scontent.fnbo10-1.fna&oh=00_AfAv0XAW2_8ptluJkG0QEd7uQK8dyQJbcn0nVAOaSMLX1A&oe=63B2098E')]"></div>
                         <div class="text-lg font-bold text-slate-700">University Of Kabianga</div>
                       </div>
                      
@@ -245,43 +251,41 @@ const BodySection = () => {
                       </div>
                     </div>
                   </div>
-                  </div><div class='flex items-center justify-center '>  <div class="rounded-xl border p-5 shadow-md w-9/12 bg-white">
+                  </div><div class='flex items-center justify-center '>  
+                  <div class="rounded-xl border p-5 shadow-md w-9/12 bg-[#e5e7eb]">
                     <div class="flex w-full items-center justify-between border-b pb-3">
                       <div class="flex items-center space-x-3">
-                        <div class="h-8 w-8 rounded-full bg-slate-400 bg-[url('https://i.pravatar.cc/32')]"></div>
-                        <div class="text-lg font-bold text-slate-700">Joe Smith</div>
+                        <div class="h-8 w-8 rounded-full bg-slate-400 bg-cover bg-[url('https://netstorage-tuko.akamaized.net/images/192d4a93a09a17e6.png?imwidth=720')]"></div>
+                        <div class="text-lg font-bold text-slate-700">Moringa Scool</div>
                       </div>
-                      <div class="flex items-center space-x-8">
-                        <button class="rounded-2xl border bg-neutral-100 px-3 py-1 text-xs font-semibold">Category</button>
-                        <div class="text-xs text-neutral-500">2 hours ago</div>
-                      </div>
+                     
                     </div>
 
                     <div class="mt-4 mb-6">
-                      <div class="mb-3 text-xl font-bold">Nulla sed leo tempus, feugiat velit vel, rhoncus neque?</div>
-                      <div class="text-sm text-neutral-600">Aliquam a tristique sapien, nec bibendum urna. Maecenas convallis dignissim turpis, non suscipit mauris interdum at. Morbi sed gravida nisl, a pharetra nulla. Etiam tincidunt turpis leo, ut mollis ipsum consectetur quis. Etiam faucibus est risus, ac condimentum mauris consequat nec. Curabitur eget feugiat massa</div>
+                     
+                      <div class="text-sm text-neutral-600">
+                      I took a 6-month hybrid intense course in software engineering, which pushed me to develop both hard and soft abilities. Being a full stack developer is one of the best skills I've acquired. I gained soft skills like leadership, collaboration, and emotional intelligence, among others. Additionally, I am familiar with the github version control system.
+
+                      </div>
                     </div>
 
                     <div>
                       <div class="flex items-center justify-between text-slate-500">
                         <div class="flex space-x-4 md:space-x-8">
                           <div class="flex cursor-pointer items-center transition hover:text-slate-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-1.5 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
-                            </svg>
-                            <span>125</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+</svg>
+
+                            <span>April,2022- November,2022</span>
                           </div>
-                          <div class="flex cursor-pointer items-center transition hover:text-slate-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-1.5 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
-                            </svg>
-                            <span>4</span>
-                          </div>
+                         
                         </div>
                       </div>
                     </div>
                   </div>
                   </div>
+                 
                   <div className="text-right flex atems-right">Nairobi, Kenya</div>
                 </div>
 
@@ -294,11 +298,7 @@ const BodySection = () => {
             </div> : <div>
             </div>
           }
-          <div className="w-[100%] p-[20px] flex flex-row-reverse justify-center align-center items-center">
-            <button class="bg-orange-500 hover:bg-orange-400 btn-sm text-white font-bold  px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded-full">
-              Preview CV
-            </button>
-          </div>
+         
         </div>
       </div>
     </div>
