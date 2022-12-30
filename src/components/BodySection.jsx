@@ -306,101 +306,145 @@ const BodySection = () => {
             skills ? <div className="w-[100%] p-[20px]  text-center justify-center flex  flex-col-reverse align-center items-center ">
               <div className="w-[100%] ">
                 <div className="w-[100%] ">
-            
-                  <link href="https://unpkg.com/pattern.css" rel="stylesheet"/>
 
-                    <div>
-                      <section class="text-gray-200 w-[100%]">
-                        <div class="w-[100%] ">
-                          {/* <div class="text-center mb-20">
+                  <link href="https://unpkg.com/pattern.css" rel="stylesheet" />
+
+                  <div>
+                    <section class="text-gray-200 w-[100%]">
+                      <div class="w-[100%] ">
+                        {/* <div class="text-center mb-20">
                             <h1 class=" title-font  mb-4 text-4xl font-extrabold leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-6xl">Compétences</h1>
                             <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">L'informatique est vaste et les langages naissent presque à tout moment, je fais tout mon possible pour être à la hauteur afin de répondre au besoin de mes clients et d'apporter de l'aide aux nouveaux développeurs.</p>
                             <div class="flex mt-6 justify-center">
                               <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
                             </div>
                           </div> */}
-                          <div class="pt-5">
-                         
-<div class="w-[100%] p-4 bg-[#222228] border rounded-lg shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-    <div class="flex items-center justify-between mb-4">
-        <h5 class="text-xl font-bold leading-none text-white dark:text-white">Hard skills</h5>
-        <a href="#" class="text-sm font-medium text-white hover:underline ">
-            View all
-        </a>
-   </div>
-   <div class="flow-root">
-        <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-            <li class="py-3 sm:py-4">
-                <div class="flex items-center space-x-4">
-                    <div class="flex-shrink-0">
-                        <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Neil image"/>
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="text-sm font-medium truncate text-white">
-                            Neil Sims
-                        </p>
-                        
-                    </div>
-                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                        $320
-                    </div>
-                </div>
-            </li>
-            <li class="py-3 sm:py-4">
-            <div class="flex items-center space-x-4">
-                    <div class="flex-shrink-0">
-                        <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Neil image"/>
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="text-sm font-medium truncate text-white">
-                            Neil Sims
-                        </p>
-                        
-                    </div>
-                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                        $320
-                    </div>
-                </div>
-            </li>
-            <li class="py-3 sm:py-4">
-            <div class="flex items-center space-x-4">
-                    <div class="flex-shrink-0">
-                        <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Neil image"/>
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="text-sm font-medium truncate text-white">
-                            Neil Sims
-                        </p>
-                        
-                    </div>
-                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                        $320
-                    </div>
-                </div>
-            </li>
-            
-            
-        </ul>
-   </div>
-</div>
+                        <div class="pt-5">
 
-                            </div></div>
-                            </section>
-                            
+                          <div class="w-[100%] p-4 bg-[#222228]  rounded-lg shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                            <div class="flex items-center justify-between mb-4">
+                              <h5 class="text-xl font-bold leading-none text-white dark:text-white">Hard skills</h5>
+                              <a href="#" class="text-sm font-medium text-white hover:underline ">
+                                View all
+                              </a>
+                            </div>
+                            <div class="flow-root">
+                              <ul role="list" class="  ">
+                                <li class="py-3 sm:py-4">
+                                  <div class="flex items-center space-x-4">
+                                    <div class="flex-shrink-0">
+                                      <img class="w-10 p-1 h-10 bg-cover" src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396319/Portfolio/React-icon.svg_bgcfwg.png" alt="Neil image" />
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                      <p class="text-sm font-medium truncate text-white">
+                                        React JS
+                                      </p>
+
+                                    </div>
+                                    <div class="inline-flex items-center text-base font-semibold text-white dark:text-white">
+                                      Expert
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="py-3 sm:py-4">
+                                  <div class="flex items-center border-none">
+                                    <div class="flex-shrink-0">
+                                      <img class="w-8 h-8 " src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396320/Portfolio/1200px-Ruby_logo.svg_w6kg4w.png" alt="Neil image" />
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                      <p class="text-sm font-medium  text-white">
+                                       Ruby On Rails
+                                      </p>
+
+                                    </div>
+                                    <div class="inline-flex items-center text-base font-semibold text-white dark:text-white">
+                                      Intermediate
+                                    </div>
+                                  </div>
+                                </li> <li class="py-3 sm:py-4">
+                                  <div class="flex items-center border-none">
+                                    <div class="flex-shrink-0">
+                                      <img class="w-8 h-8 " src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396318/Portfolio/Csharp_Logo_b4jx5o.png" alt="Neil image" />
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                      <p class="text-sm font-medium  text-white">
+                                       C# .NET Framework
+                                      </p>
+
+                                    </div>
+                                    <div class="inline-flex items-center text-base font-semibold text-white dark:text-white">
+                                      Expert
+                                    </div>
+                                  </div>
+                                </li> <li class="py-3 sm:py-4">
+                                  <div class="flex items-center border-none">
+                                    <div class="flex-shrink-0">
+                                      <img class="w-8 h-8 " src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396319/Portfolio/Tailwind_CSS_Logo.svg_mnon60.png" alt="Neil image" />
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                      <p class="text-sm font-medium  text-white">
+                                       TailwindCSS
+                                      </p>
+
+                                    </div>
+                                    <div class="inline-flex items-center text-base font-semibold text-white dark:text-white">
+                                      Expert
+                                    </div>
+                                  </div>
+                                </li> <li class="py-3 sm:py-4">
+                                  <div class="flex items-center border-none">
+                                    <div class="flex-shrink-0">
+                                      <img class="w-8 h-8 " src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396318/Portfolio/732190_stxkuy.png" alt="Neil image" />
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                      <p class="text-sm font-medium  text-white">
+                                       CSS
+                                      </p>
+
+                                    </div>
+                                    <div class="inline-flex items-center text-base font-semibold text-white dark:text-white">
+                                      Expert
+                                    </div>
+                                  </div>
+                                </li> <li class="py-3 sm:py-4">
+                                  <div class="flex items-center border-none">
+                                    <div class="flex-shrink-0">
+                                      <img class="w-8 h-8 " src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396318/Portfolio/732212_ccvyzp.png" alt="Neil image" />
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                      <p class="text-sm font-medium  text-white">
+                                       HTML
+                                      </p>
+
+                                    </div>
+                                    <div class="inline-flex items-center text-base font-semibold text-white">
+                                      Expert
+                                    </div>
+                                  </div>
+                                </li>
+                                
+
+                              </ul>
+                            </div>
                           </div>
-                        </div>
 
+                        </div></div>
+                    </section>
 
-                    </div>
-
-                </div> : <div>
+                  </div>
                 </div>
-          }
+
 
               </div>
+
+            </div> : <div>
             </div>
+          }
+
+        </div>
+      </div>
     </div>
-        );
+  );
 };
 
-        export default BodySection;
+export default BodySection;
