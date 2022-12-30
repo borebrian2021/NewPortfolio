@@ -8,11 +8,11 @@ import Footer  from './components/Footer'
 function App() {
 
   return (
-   <>
+   <div className="flex flex-col h-screen">
    <NavBar />
    <BodySection/>
    <Footer/>
-   </>
+   </div>
   )
 }
 

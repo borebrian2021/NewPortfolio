@@ -1,16 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion"
 
-const menuVariants = {
-  open: {
-    opacity: 1,
-    x: 0,
-  },
-  closed: {
-    opacity: 0,
-    x: '-100%',
-  },
-}
+
 const BodySection = () => {
   const [about, setAbout] = useState(true)
   const [education, setEducation] = useState(false)
@@ -19,6 +10,16 @@ const BodySection = () => {
   const [testimonials, setTestimonial] = useState(false)
   const [cert, setCert] = useState(false)
 
+  const menuVariants = {
+    open: {
+      opacity: 1,
+      x: 0,
+    },
+    closed: {
+      opacity: 0,
+      x: '-100%',
+    },
+  }
 
   const setActiveTab = (id) => {
     switch (id) {
@@ -29,7 +30,6 @@ const BodySection = () => {
         setProjects(false)
         setTestimonial(false)
         setCert(false)
-
         break;
       case 2:
         setAbout(false)
@@ -78,8 +78,8 @@ const BodySection = () => {
 
 
   return (
-    <div className= {about ? "bg-[#222228] transition-all duration-300 ease-in-out" : "transition-all duration-300 ease-in-out grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 bg-[#222228]"}>
-      <div className={ about ?"hidden":"flex justify-center h-[100%] w-[100%] col-span-1  items-center text-center align-right"}>
+    <div className="transition-all duration-300 ease-in-out grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 bg-[#222228]">
+      <div className="flex justify-center h-[100%] w-[100%] col-span-1  items-center text-center align-right">
         <div className="w-[100%] h-[500px] flex justify-center items-center text-center align-center">
           <div className="w-[90%] h-[85%] rounded-md  bg-[#31313a]  ">
             <div className="w-[100%] relative h-[30%] bg-[#31313a]  bg-url  rounded-md border-tweaks">
@@ -177,11 +177,22 @@ const BodySection = () => {
           </div>
           {
             about ? <div className="w-[100%] p-[20px]  text-center justify-center flex  flex-col-reverse align-center items-center ">
+              <button className="btn gap-2 m-5 ">
+                Preview CV
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+
+              </button>
+              <p className="text-white">Nairobi, Kenya</p>
+              <p className="text-white">+254712035642</p>
+              <p className="text-white">bkimutai2021@gmail.com</p>
               <p className="text-white">
-                Building a successful product is a challenge. I am highly
+                Building a successful product is a challenge.I am highly
                 energetic in user experience design, interfaces and web
                 development.
-              </p>{" "}
+              </p>
               <div className=" grid lg:grid-cols-3 md:grid-col-3 sm:grid-col-2 grid-col-2 w-[100%]">
                 <div className="w-[100%] grid lg:grid-cols-2 md:grid-col-2 sm:grid-col-2 grid-col-2">
                   <div className="text-left flex atems-left">  <svg
@@ -206,7 +217,6 @@ const BodySection = () => {
                   <div className="text-right flex atems-right">Nairobi, Kenya</div>
                 </div>
 
-
               </div>
               <img
                 src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1671186857/Portfolio/aboutme_e0vvlj.gif"
@@ -217,92 +227,180 @@ const BodySection = () => {
           }
           {
             education ? <div className="w-[100%] p-[20px]  text-center justify-center flex  flex-col-reverse align-center items-center ">
-             
               <div className=" ">
                 <div className="w-[100%] grid lg:grid-cols-2 md:grid-col-2 sm:grid-col-2 grid-col-2">
 
-                <div class='flex items-center justify-center '>  
-                  <div class="rounded-xl border p-5 shadow-md w-9/12 bg-[#e5e7eb]">
-                    <div class="flex w-full items-center justify-between border-b pb-3">
-                      <div class="flex items-center space-x-3">
-                        <div class="h-8 w-8 rounded-full bg-slate-400 bg-cover bg-[url('https://scontent.fnbo10-1.fna.fbcdn.net/v/t39.30808-6/295453090_479863670806352_4369703827020652282_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGckKzLjo7LcY8-8cqQcuFJDrot8yY8B4QOui3zJjwHhFT5RxP9rMlV2zkGL0yQdUJ42_LH0a3_3m4Ox9ueIE86&_nc_ohc=6Iga3vyEUkoAX-hzTQh&_nc_ht=scontent.fnbo10-1.fna&oh=00_AfAv0XAW2_8ptluJkG0QEd7uQK8dyQJbcn0nVAOaSMLX1A&oe=63B2098E')]"></div>
-                        <div class="text-lg font-bold text-slate-700">University Of Kabianga</div>
+                  <div class='flex items-center justify-center '>
+                    <div class="rounded-xl border p-5 shadow-md w-9/12 bg-[#e5e7eb]">
+                      <div class="flex w-full items-center justify-between border-b pb-3">
+                        <div class="flex items-center space-x-3">
+                          <div class="h-8 w-8 rounded-full bg-slate-400 bg-cover bg-[url('https://scontent.fnbo10-1.fna.fbcdn.net/v/t39.30808-6/295453090_479863670806352_4369703827020652282_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGckKzLjo7LcY8-8cqQcuFJDrot8yY8B4QOui3zJjwHhFT5RxP9rMlV2zkGL0yQdUJ42_LH0a3_3m4Ox9ueIE86&_nc_ohc=6Iga3vyEUkoAX-hzTQh&_nc_ht=scontent.fnbo10-1.fna&oh=00_AfAv0XAW2_8ptluJkG0QEd7uQK8dyQJbcn0nVAOaSMLX1A&oe=63B2098E')]"></div>
+                          <div class="text-lg font-bold text-slate-700">University Of Kabianga</div>
+                        </div>
+
                       </div>
-                     
-                    </div>
+                      <div class="mt-4 mb-6">
 
-                    <div class="mt-4 mb-6">
-                     
-                      <div class="text-sm text-neutral-600">I completed four years of technical software development training where I honed my time management, team-building, and ability to design Web applications. I also acquired entrepreneurial abilities, such as business management abilities.</div>
-                    </div>
+                        <div class="text-sm text-neutral-600">I completed four years of technical software development training where I honed my time management, team-building, and ability to design Web applications. I also acquired entrepreneurial abilities, such as business management abilities.</div>
+                      </div>
 
-                    <div>
-                      <div class="flex items-center justify-between text-slate-500">
-                        <div class="flex space-x-4 md:space-x-8">
-                          <div class="flex cursor-pointer items-center transition hover:text-slate-600">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
-</svg>
+                      <div>
+                        <div class="flex items-center justify-between text-slate-500">
+                          <div class="flex space-x-4 md:space-x-8">
+                            <div class="flex cursor-pointer items-center transition hover:text-slate-600">
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                              </svg>
 
-                            <span>2017-2021</span>
+                              <span>2017-2021</span>
+                            </div>
+
                           </div>
-                         
+                        </div>
+                      </div>
+                    </div>
+                  </div><div class='flex items-center justify-center '>
+                    <div class="rounded-xl border p-5 shadow-md w-9/12 bg-[#e5e7eb]">
+                      <div class="flex w-full items-center justify-between border-b pb-3">
+                        <div class="flex items-center space-x-3">
+                          <div class="h-8 w-8 rounded-full bg-slate-400 bg-cover bg-[url('https://netstorage-tuko.akamaized.net/images/192d4a93a09a17e6.png?imwidth=720')]"></div>
+                          <div class="text-lg font-bold text-slate-700">Moringa Scool</div>
+                        </div>
+
+                      </div>
+
+                      <div class="mt-4 mb-6">
+
+                        <div class="text-sm text-neutral-600">
+                          I took an hybrid  course in software engineering, I develop  hard and soft abilities. Being a full stack developer is one of the best skills I've acquired. I gained soft skills like leadership, collaboration, and emotional intelligence, among others.
+
+                        </div>
+                      </div>
+
+                      <div>
+                        <div class="flex items-center justify-between text-slate-500">
+                          <div class="flex space-x-4 md:space-x-8">
+                            <div class="flex cursor-pointer items-center transition hover:text-slate-600">
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                              </svg>
+
+                              <span>April,2022- November,2022</span>
+                            </div>
+
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  </div><div class='flex items-center justify-center '>  
-                  <div class="rounded-xl border p-5 shadow-md w-9/12 bg-[#e5e7eb]">
-                    <div class="flex w-full items-center justify-between border-b pb-3">
-                      <div class="flex items-center space-x-3">
-                        <div class="h-8 w-8 rounded-full bg-slate-400 bg-cover bg-[url('https://netstorage-tuko.akamaized.net/images/192d4a93a09a17e6.png?imwidth=720')]"></div>
-                        <div class="text-lg font-bold text-slate-700">Moringa Scool</div>
-                      </div>
-                     
-                    </div>
 
-                    <div class="mt-4 mb-6">
-                     
-                      <div class="text-sm text-neutral-600">
-                      I took a 6-month hybrid intense course in software engineering, which pushed me to develop both hard and soft abilities. Being a full stack developer is one of the best skills I've acquired. I gained soft skills like leadership, collaboration, and emotional intelligence, among others. Additionally, I am familiar with the github version control system.
-
-                      </div>
-                    </div>
-
-                    <div>
-                      <div class="flex items-center justify-between text-slate-500">
-                        <div class="flex space-x-4 md:space-x-8">
-                          <div class="flex cursor-pointer items-center transition hover:text-slate-600">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
-</svg>
-
-                            <span>April,2022- November,2022</span>
-                          </div>
-                         
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                 
                   <div className="text-right flex atems-right">Nairobi, Kenya</div>
                 </div>
 
 
               </div>
-              <img
-                src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672211775/Portfolio/animation_300_lc7bo2dh_uvjux4.gif"
-                className="h-[160px] align-center"
-              />
+
             </div> : <div>
             </div>
+          } {
+            skills ? <div className="w-[100%] p-[20px]  text-center justify-center flex  flex-col-reverse align-center items-center ">
+              <div className="w-[100%] ">
+                <div className="w-[100%] ">
+            
+                  <link href="https://unpkg.com/pattern.css" rel="stylesheet"/>
+
+                    <div>
+                      <section class="text-gray-200 w-[100%]">
+                        <div class="w-[100%] ">
+                          {/* <div class="text-center mb-20">
+                            <h1 class=" title-font  mb-4 text-4xl font-extrabold leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-6xl">Compétences</h1>
+                            <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">L'informatique est vaste et les langages naissent presque à tout moment, je fais tout mon possible pour être à la hauteur afin de répondre au besoin de mes clients et d'apporter de l'aide aux nouveaux développeurs.</p>
+                            <div class="flex mt-6 justify-center">
+                              <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+                            </div>
+                          </div> */}
+                          <div class="pt-5">
+                         
+<div class="w-[100%] p-4 bg-[#222228] border rounded-lg shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div class="flex items-center justify-between mb-4">
+        <h5 class="text-xl font-bold leading-none text-white dark:text-white">Hard skills</h5>
+        <a href="#" class="text-sm font-medium text-white hover:underline ">
+            View all
+        </a>
+   </div>
+   <div class="flow-root">
+        <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+            <li class="py-3 sm:py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Neil image"/>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-medium truncate text-white">
+                            Neil Sims
+                        </p>
+                        
+                    </div>
+                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                        $320
+                    </div>
+                </div>
+            </li>
+            <li class="py-3 sm:py-4">
+            <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Neil image"/>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-medium truncate text-white">
+                            Neil Sims
+                        </p>
+                        
+                    </div>
+                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                        $320
+                    </div>
+                </div>
+            </li>
+            <li class="py-3 sm:py-4">
+            <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Neil image"/>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-medium truncate text-white">
+                            Neil Sims
+                        </p>
+                        
+                    </div>
+                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                        $320
+                    </div>
+                </div>
+            </li>
+            
+            
+        </ul>
+   </div>
+</div>
+
+                            </div></div>
+                            </section>
+                            
+                          </div>
+                        </div>
+
+
+                    </div>
+
+                </div> : <div>
+                </div>
           }
-         
-        </div>
-      </div>
+
+              </div>
+            </div>
     </div>
-  );
+        );
 };
 
-export default BodySection;
+        export default BodySection;
