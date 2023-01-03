@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { motion } from "framer-motion"
 
 
@@ -9,6 +9,7 @@ const BodySection = () => {
   const [projects, setProjects] = useState(false)
   const [testimonials, setTestimonial] = useState(false)
   const [cert, setCert] = useState(false)
+  const [projects_,setProjects_]=useState([{name:"Hashtag Technologies Website",image:"https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560673/Portfolio/Capture1_xqivsd.jpg",description:"Complete website demonstrating the services and goods offered at Hashtag Technologies Limited.",url:"http://hashtagtech.co.ke/",location:"Nanyuki,Kenya"}])
 
   const menuVariants = {
     open: {
@@ -74,17 +75,19 @@ const BodySection = () => {
 
     }
   }
-
+  useEffect(() => {
+    console.log(projects_.name)
+  }, [projects_])
 
 
   return (
     <div className="transition-all duration-300 ease-in-out grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 bg-[#222228]">
       <div className="flex justify-center h-[100%] w-[100%] col-span-1  items-center text-center align-right">
         <div className="w-[100%] h-[500px] flex justify-center items-center text-center align-center">
-          <div className="w-[90%] h-[85%] rounded-md  bg-[#31313a]  ">
+          <div className="w-[90%] h-[85%] rounded-[5px]  bg-[#31313a]  ">
             <div className="w-[100%] relative h-[30%] bg-[#31313a]  bg-url  rounded-md border-tweaks">
               <img
-                class="object-cover bg-[#31313a] h-[100%] w-[100%] rounded-t-md "
+                class="object-cover bg-[#31313a] h-[100%] w-[100%] rounded-t-[3px] "
                 src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1670941004/Portfolio/horizon_kz3clw.jpg"
               />
               <img
@@ -93,8 +96,8 @@ const BodySection = () => {
               />
             </div>
             <p className="text-white mt-[15%] text-1xl">Brian Koskei</p>
-            <p className="text-orange-500 text-[12px]">Frontend Developer</p>
-            <p className="text-white text-[12px] m-3">
+            <p className="text-orange-500 text-[12px] font-sans">Frontend Developer</p>
+            <p className="text-white text-[12px] m-3 font-">
               I am a gifted individual.I work hard to improve and even deliver
               the finest possible outcomes for my industry. I chose programming
               to improve my problem-solving abilities and to share my ideas with
@@ -102,34 +105,34 @@ const BodySection = () => {
               passionate, outspoken, multi-talented individual that learns
               quickly.{" "}
             </p>
-            <button className="btn gap-2 m-5 btn-sm text-xs ">
-                Preview CV
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+            <button className="btn gap-2 m-5 p-1 h-[50px] rounded-[3px] btn-sm text-xs w-[70%] bg-[#d35a2e] border-1 border-[#31313a]">
+              Preview CV
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
 
-              </button>
+            </button>
             <div className="w-[100%] flex  m-[3px] justify-center ">
               <div className="w-[80%] text-white flex grid-col-5 h-[70px] m-[3px]">
-               
+
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="h-[100%] w-[100%] flex justify-center col-span-3 items-center align-center">
-        <div className=" rounded-md  bg-[#31313a] w-[100%] overflow-x-auto overflow-y-auto gap-1 mr-3 h-[95%] ml-3">
+      <div className="h-[100%]  w-[100%] flex justify-center col-span-3 items-center align-center">
+        <div className=" rounded-[3px]  bg-[#31313a] w-[100%] overflow-x-auto overflow-y-auto gap-1 mr-3 h-[95%] ml-3">
           <div className="tabs flex w-[100%] justify-center items-center align-center mt-5">
-            <a className={about ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(1) }} >About me</a>
-            <a className={education ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(2) }}>Certification</a>
-            <a className={skills ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(3) }}>Skills</a>
-            <a className={projects ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(4) }}>Projects</a>
-            <a className={testimonials ? "tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(5) }}>Testimonials</a>
+            <a className={about ? "rounded-[3px]  tab tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(1) }} >About me</a>
+            <a className={education ? "tab tab-active rounded-[3px]  tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(2) }}>Certification</a>
+            <a className={skills ? "tab tab-active rounded-[3px]  tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(3) }}>Skills</a>
+            <a className={projects ? "tab tab-active rounded-[3px]  tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(4) }}>Projects</a>
+            <a className={testimonials ? "tab rounded-[3px]  tab-active tab-lifted " : "tab text-white"} onClick={() => { setActiveTab(5) }}>Testimonials</a>
           </div>
           {
-            about ? <div className="w-[100%] p-[20px]   text-center justify-center flex  flex-col-reverse align-center items-center ">
-              <button className="btn gap-2 m-5 btn-sm text-xs ">
+            about ? <div className="w-[100%] p-[20px] rounded-[3px]   text-center justify-center flex  flex-col-reverse align-center items-center ">
+              <button className="btn gap-2 m-5 rounded-[3px] p-[1] h-[50px] bg-[#d35a2e] btn-sm text-xs ">
                 Hire me
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
@@ -145,7 +148,7 @@ const BodySection = () => {
                 energetic in user experience design, interfaces and web
                 development.
               </p>
-            
+
               <div className=" grid lg:grid-cols-3 md:grid-col-3 sm:grid-col-2 grid-col-2 w-[100%]">
                 <div className="w-[100%] grid lg:grid-cols-2 md:grid-col-2 sm:grid-col-2 grid-col-2">
                   <div className="text-left flex atems-left">  <svg
@@ -184,7 +187,7 @@ const BodySection = () => {
                 <div className="w-[100%] grid lg:grid-cols-2 md:grid-col-2 sm:grid-col-2 grid-col-2">
 
                   <div class='flex items-center justify-center '>
-                    <div class="rounded-xl border p-5 shadow-md w-9/12 bg-[#e5e7eb]">
+                    <div class="rounded-[3px] border p-5 shadow-md w-9/12 bg-[#e5e7eb]">
                       <div class="flex w-full items-center justify-between border-b pb-3">
                         <div class="flex items-center space-x-3">
                           <div class="h-8 w-8 rounded-full bg-slate-400 bg-cover bg-[url('https://scontent.fnbo10-1.fna.fbcdn.net/v/t39.30808-6/295453090_479863670806352_4369703827020652282_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGckKzLjo7LcY8-8cqQcuFJDrot8yY8B4QOui3zJjwHhFT5RxP9rMlV2zkGL0yQdUJ42_LH0a3_3m4Ox9ueIE86&_nc_ohc=6Iga3vyEUkoAX-hzTQh&_nc_ht=scontent.fnbo10-1.fna&oh=00_AfAv0XAW2_8ptluJkG0QEd7uQK8dyQJbcn0nVAOaSMLX1A&oe=63B2098E')]"></div>
@@ -213,11 +216,11 @@ const BodySection = () => {
                       </div>
                     </div>
                   </div><div class='flex items-center justify-center '>
-                    <div class="rounded-xl border p-5 shadow-md w-9/12 bg-[#e5e7eb]">
+                    <div class="rounded-[3px] border p-5 shadow-md w-9/12 bg-[#e5e7eb]">
                       <div class="flex w-full items-center justify-between border-b pb-3">
                         <div class="flex items-center space-x-3">
                           <div class="h-8 w-8 rounded-full bg-slate-400 bg-cover bg-[url('https://netstorage-tuko.akamaized.net/images/192d4a93a09a17e6.png?imwidth=720')]"></div>
-                          <div class="text-lg font-bold text-slate-700">Moringa Scool</div>
+                          <div class="text-lg font-bold text-slate-700 custome_font">Moringa Scool</div>
                         </div>
 
                       </div>
@@ -256,200 +259,170 @@ const BodySection = () => {
             </div> : <div>
             </div>
           } {
-            skills ? <div className="w-[100%] p-[20px]  text-center justify-center flex  flex-col-reverse align-center items-center ">
-              <div className="w-[100%] ">
-                <div className="w-[100%] ">
+            skills ? <div className="w-[100%] p-[20px]  text-center justify-center over flex  flex-col-reverse align-center items-center ">
 
-                  <link href="https://unpkg.com/pattern.css" rel="stylesheet" />
-
-                  <div>
-                    <section class="text-gray-200 w-[100%]">
-                      <div class="w-[100%] ">
-                        {/* <div class="text-center mb-20">
-                            <h1 class=" title-font  mb-4 text-4xl font-extrabold leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-6xl">Compétences</h1>
-                            <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">L'informatique est vaste et les langages naissent presque à tout moment, je fais tout mon possible pour être à la hauteur afin de répondre au besoin de mes clients et d'apporter de l'aide aux nouveaux développeurs.</p>
-                            <div class="flex mt-6 justify-center">
-                              <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
-                            </div>
-                          </div> */}
-                        <div class="pt-5">
-
-                          <div class="w-[100%] p-4 bg-[#222228]  rounded-lg shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-                            <div class="flex items-center justify-between mb-4">
-                              <h5 class="text-xl font-bold leading-none text-white dark:text-white">Hard skills</h5>
-                              <a href="#" class="text-sm font-medium text-white hover:underline ">
-                                View all
-                              </a>
-                            </div>
-                            <div class="flow-root">
-                              <ul role="list" class="  ">
-                                <li class="py-3 sm:py-4">
-                                  <div class="flex items-center space-x-4">
-                                    <div class="flex-shrink-0">
-                                      <img class="w-10 p-1 h-10 bg-cover" src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396319/Portfolio/React-icon.svg_bgcfwg.png" alt="Neil image" />
-                                    </div>
-                                    <div class="flex-1 min-w-0">
-                                      <p class="text-sm font-medium truncate text-white">
-                                        React JS
-                                      </p>
-
-                                    </div>
-                                    <div class="inline-flex items-center text-base font-semibold text-white dark:text-white">
-                                      Expert
-                                    </div>
-                                  </div>
-                                </li>
-                                <li class="py-3 sm:py-4">
-                                  <div class="flex items-center border-none">
-                                    <div class="flex-shrink-0">
-                                      <img class="w-8 h-8 " src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396320/Portfolio/1200px-Ruby_logo.svg_w6kg4w.png" alt="Neil image" />
-                                    </div>
-                                    <div class="flex-1 min-w-0">
-                                      <p class="text-sm font-medium  text-white">
-                                       Ruby On Rails
-                                      </p>
-
-                                    </div>
-                                    <div class="inline-flex items-center text-base font-semibold text-white dark:text-white">
-                                      Intermediate
-                                    </div>
-                                  </div>
-                                </li> <li class="py-3 sm:py-4">
-                                  <div class="flex items-center border-none">
-                                    <div class="flex-shrink-0">
-                                      <img class="w-8 h-8 " src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396318/Portfolio/Csharp_Logo_b4jx5o.png" alt="Neil image" />
-                                    </div>
-                                    <div class="flex-1 min-w-0">
-                                      <p class="text-sm font-medium  text-white">
-                                       C# .NET Framework
-                                      </p>
-
-                                    </div>
-                                    <div class="inline-flex items-center text-base font-semibold text-white dark:text-white">
-                                      Expert
-                                    </div>
-                                  </div>
-                                </li>
-                                 <li class="py-3 sm:py-4">
-                                  <div class="flex items-center border-none">
-                                    <div class="flex-shrink-0">
-                                      <img class="w-8 h-8 " src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396319/Portfolio/Tailwind_CSS_Logo.svg_mnon60.png" alt="Neil image" />
-                                    </div>
-                                    <div class="flex-1 min-w-0">
-                                      <p class="text-sm font-medium  text-white">
-                                       TailwindCSS
-                                      </p>
-
-                                    </div>
-                                    <div class="inline-flex items-center text-base font-semibold text-white dark:text-white">
-                                      Expert
-                                    </div>
-                                  </div>
-                                </li> <li class="py-3 sm:py-4">
-                                  <div class="flex items-center border-none">
-                                    <div class="flex-shrink-0">
-                                      <img class="w-8 h-8 " src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396318/Portfolio/732190_stxkuy.png" alt="Neil image" />
-                                    </div>
-                                    <div class="flex-1 min-w-0">
-                                      <p class="text-sm font-medium  text-white">
-                                       CSS
-                                      </p>
-
-                                    </div>
-                                    <div class="inline-flex items-center text-base font-semibold text-white dark:text-white">
-                                      Expert
-                                    </div>
-                                  </div>
-                                </li> <li class="py-3 sm:py-4">
-                                  <div class="flex items-center border-none">
-                                    <div class="flex-shrink-0">
-                                      <img class="w-8 h-8 " src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396318/Portfolio/732212_ccvyzp.png" alt="Neil image" />
-                                    </div>
-                                    <div class="flex-1 min-w-0">
-                                      <p class="text-sm font-medium  text-white">
-                                       HTML
-                                      </p>
-
-                                    </div>
-                                    <div class="inline-flex items-center text-base font-semibold text-white">
-                                      Expert
-                                    </div>
-                                  </div>
-                                </li>
-                                
-
-                              </ul>
-                            </div>
+              <div className="w-[100%] grid lg:grid-cols-2  gap-4 md:grid-col-2 sm:grid-col-2 grid-col-2">
+                <div className="bg-[#e5e7eb] p-4 rounded-[3px] text-dark"> <div class="flex items-center justify-between mb-4">
+                  <h5 class="text-xl  leading-none text-dark">Hard skills</h5>
+                  <a href="#" class="text-xl font-medium  hover:underline ">
+                    Experience
+                  </a>
+                </div>
+                  <div class="flow-root">
+                    <ul role="list" class="  ">
+                      <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4">
+                          <div class="flex-shrink-0">
+                            <img class="w-10 p-1 h-10 bg-cover" src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396319/Portfolio/React-icon.svg_bgcfwg.png" alt="Neil image" />
                           </div>
-                          <div class="w-[100%] p-4 mt-4 bg-[#222228]  rounded-lg shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-                            <div class="flex items-center justify-between mb-4">
-                              <h5 class="text-xl font-bold leading-none text-white dark:text-white">Soft skills</h5>
-                             
-                            </div>
-                            <div class="flow-root">
-                              <ul role="list" class="  ">
-                                <li class="py-3 sm:py-4">
-                                  <div class="flex items-center space-x-4">
-                                  <p class="text-sm font-medium truncate text-white">
-                                        Communication skills
-                                      </p>
-                                   
-                                  </div>
-                                </li>
-                                <li class="py-3 sm:py-4">
-                                  <div class="flex items-center border-none">
-                                    <div class="flex-shrink-0">
-                                    <p class="text-sm font-medium truncate text-white">
-                                       Self Confidence 
-                                    </p>
-                                    </div>                                   
-                                  </div>
-                                </li>
-                                 <li class="py-3 sm:py-4">
-                                  <div class="flex items-center border-none">
-                                    <div class="flex-shrink-0">
-                                    <p class="text-sm font-medium truncate text-white">
-                                        Communication skills
-                                    </p>
-                                        </div>
-                                    <div class="flex-1 min-w-0">
-                                      <p class="text-sm font-medium  text-white">
-                                      </p>
-                                    </div>
-                                  
-                                  </div>
-                                </li> 
-                                <li class="py-3 sm:py-4">
-                                  <div class="flex items-center border-none">
-                                    <div class="flex-shrink-0">
-                                    Leading self
-                                     </div>
-                                    <div class="flex-1 min-w-0">
-                                    
-                                    </div>
-                                    
+                          <div class="flex-1 min-w-0">
+                            <p class="text-sm font-medium truncate text-dark">
+                              React JS
+                            </p>
 
-                                  </div>
-                                </li>
-                                
-
-                              </ul>
-                            </div>
                           </div>
+                          <div class="inline-flex items-center text-base  text-dark dark:text-white">
+                            Expert
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-3 sm:py-4">
+                        <div class="flex items-center border-none">
+                          <div class="flex-shrink-0">
+                            <img class="w-8 h-8 " src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396320/Portfolio/1200px-Ruby_logo.svg_w6kg4w.png" alt="Neil image" />
+                          </div>
+                          <div class="flex-1 min-w-0">
+                            <p class="text-sm font-medium  text-dark">
+                              Ruby On Rails
+                            </p>
 
-                        </div></div>
-                    </section>
+                          </div>
+                          <div class="inline-flex items-center text-base text-dark dark:text-white">
+                            Intermediate
+                          </div>
+                        </div>
+                      </li> <li class="py-3 sm:py-4">
+                        <div class="flex items-center border-none">
+                          <div class="flex-shrink-0">
+                            <img class="w-8 h-8 " src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396318/Portfolio/Csharp_Logo_b4jx5o.png" alt="Neil image" />
+                          </div>
+                          <div class="flex-1 min-w-0">
+                            <p class="text-sm font-medium  text-dark">
+                              C# .NET Framework
+                            </p>
 
+                          </div>
+                          <div class="inline-flex items-center text-base  text-dark dark:text-white">
+                            Expert
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-3 sm:py-4">
+                        <div class="flex items-center border-none">
+                          <div class="flex-shrink-0">
+                            <img class="w-8 h-8 " src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396319/Portfolio/Tailwind_CSS_Logo.svg_mnon60.png" alt="Neil image" />
+                          </div>
+                          <div class="flex-1 min-w-0">
+                            <p class="text-sm font-medium  text-dark">
+                              TailwindCSS
+                            </p>
+
+                          </div>
+                          <div class="inline-flex items-center text-base  text-dark dark:text-white">
+                            Expert
+                          </div>
+                        </div>
+                      </li> <li class="py-3 sm:py-4">
+                        <div class="flex items-center border-none">
+                          <div class="flex-shrink-0">
+                            <img class="w-8 h-8 " src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396318/Portfolio/732190_stxkuy.png" alt="Neil image" />
+                          </div>
+                          <div class="flex-1 min-w-0">
+                            <p class="text-sm font-medium  text-dark">
+                              CSS
+                            </p>
+
+                          </div>
+                          <div class="inline-flex items-center text-base  text-dark dark:text-white">
+                            Expert
+                          </div>
+                        </div>
+                      </li> <li class="py-3 sm:py-4">
+                        <div class="flex items-center border-none">
+                          <div class="flex-shrink-0">
+                            <img class="w-8 h-8 " src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672396318/Portfolio/732212_ccvyzp.png" alt="Neil image" />
+                          </div>
+                          <div class="flex-1 min-w-0">
+                            <p class="text-sm font-medium  text-dark">
+                              HTML
+                            </p>
+
+                          </div>
+                          <div class="inline-flex items-center text-base  text-white">
+                            Expert
+                          </div>
+                        </div>
+                      </li>
+
+
+                    </ul>
                   </div>
                 </div>
+                <div class="flow-root p-4 rounded-[3px] bg-[#e5e7eb]">
+                  <ul role="list" class="  ">
+                    
+                    <li class="text-dark">
+                      <div class="flex items-center border-none">
+                        <div class="flex-shrink-0">
+                          <p class="text-xl font-medium truncate text-dark">
+                           Soft Skills
+                          </p>
+                        </div>
+                      </div>
+                    </li>  <li class="py-3 sm:py-4">
+                      <div class="flex items-center border-none">
+                        <div class="flex-shrink-0">
+                          <p class="text-sm font-medium truncate text-dark">
+                            Self Confidence
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="py-3 sm:py-4">
+                      <div class="flex items-center border-none">
+                        <div class="flex-shrink-0">
+                          <p class="text-sm font-medium truncate text-dark">
+                            Communication skills
+                          </p>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                          <p class="text-sm font-medium  text-white">
+                          </p>
+                        </div>
 
+                      </div>
+                    </li>
+                    <li class="py-3 sm:py-4">
+                      <div class="flex items-center border-none">
+                        <div class="flex-shrink-0">
+                          Leading self
+                        </div>
+                        <div class="flex-1 min-w-0">
+</div>
+                        </div>
+                    </li>
+                  </ul>
+
+                </div>
 
               </div>
+
+
 
             </div> : <div>
             </div>
           }
-          
+
           {
             projects ? <div className="w-[100%] p-[20px]  text-center justify-center flex  flex-col-reverse align-center items-center ">
               <div className="w-[100%] ">
@@ -457,67 +430,52 @@ const BodySection = () => {
 
                   <link href="https://unpkg.com/pattern.css" rel="stylesheet" />
 
-                  <div>
-                    <section class="text-gray-200 w-[100%]">
-                      <div class="w-[100%] ">
-                      <div class="lg:flex mb-4 m-10 rounded mx-auto">
+    <div className="carousel w-full">
+     <div id="item1" className="carousel-item w-full flex justify-center">
+    <img src={projects_.image} className="w-full custome-shaddow object-cover  max-h-[300px] rounded-[3px]" />
+     </div> 
+  <div id="item2" className="carousel-item w-full">
+    <img src={projects_.image} className="w-full max-h-[300px] object-cover rounded-[3px]" />
+  </div> 
+  <div id="item3" className="carousel-item w-full">
+    <img src={projects_.image} className="w-full max-h-[300px] object-cover rounded-[3px]" />
+  </div> 
+  <div id="item4" className="carousel-item w-full">
+    <img src={projects_.image} className="w-full max-h-[300px] object-cover rounded-[3px]" />
+  </div>
+</div> 
+<div className="flex justify-center w-full py-2 gap-2">
 
-<div class="w-full lg:w-1/3 rounded overflow-hidden shadow-lg m-10 relative flex flex-col">
-  <img class="w-full" src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560672/Portfolio/Capture_ed9ftc.jpg" alt="Sunset in the mountains"/>
-    <div class="px-6 py-4 h-full">
-      <div class="font-bold text-xl mb-2">Cedar Gardens and Resort</div>
-      <p class="text-white text-base">
-      Complete website demonstrating the services offered at Cedar Gardens and resort.
-      </p>
-    </div>
-  <a href="https://cedargardenhotel.co.ke/" class="w-full bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-    <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
-    <span>Visit</span>
-  </a>
+  <a href="#item1" className="btn btn-xs" onClick={()=>{
+    setProjects_ ({name:"Cedar Gardens",image:"https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560672/Portfolio/Capture_ed9ftc.jpg",description:"Complete website showcasing the services offered at Cedar Gardens and resort.",url:"https://cedargardenhotel.co.ke/",location:"Meru,Kenya"});
+    }
+  }
+    
+    ><img src={projects_.image} className="h-10 w-10 rounded-full object-cover m-3"/></a> 
+  <a href="#item2"  onClick={()=>{
+    setProjects_ ({name:"Hashtag Technologies Website",image:"https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560673/Portfolio/Capture1_xqivsd.jpg",description:"Complete website demonstrating the services and goods offered at Hashtag Technologies Limited.",url:"http://hashtagtech.co.ke/",location:"Nanyuki,Kenya"});
+    } }><img src={projects_.image} className="h-10 w-10 rounded-full object-cover m-3"/></a> 
+  <a href="#item3" onClick={()=>{
+      setProjects_ ({name:"Complete Web Based Point of Sale",image:"https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560672/Portfolio/Capture2_rvr5ht.jpg",description:" comprehensive web-based point of sale system with integrated thermal printers and scanners.",url:"https://supremesai.co.ke/system_two/Log_in/",location:"Nairobi,Kenya"});
+      }} ><img src={projects_.image} className="h-10 w-10 rounded-full object-cover m-3"/></a> 
+  <a href="#item4" className="rounded-full h-[10] w-[10] bg-cover" onClick={()=>{
+      setProjects_ ({name:"Inventory Management(Invoice,Delivery & Receipt Generator",image:"https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560674/Portfolio/Capture3_yqki9n.jpg",description:"Complete website showcasing the services offered at Cedar Gardens and resort.",url:"hhttps://supremesai.co.ke/log_in/Log_in",location:"Nairobi,Kenya"});
+      }} ><img src={projects_.image} className="h-10 w-10 rounded-full object-cover m-3"/></a>
 </div>
+<div className="w-100% flex flex-col-reverse items-center align-center justify-center text-[]" >
+<a target="_blank" rel="noopener noreferrer" href={projects_.url} className="btn  gap-2 m-5 p-1 h-[50px] rounded-[3px] btn-sm text-xs w-[20%] bg-white text-[#222228] border-1 ">
+              Visit Link
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </a>
+  <h1 className="text-white text-sm" >{projects_.location}</h1>
+  <h1 className="text-white text-xs">{projects_.description}</h1>
+  <h1 className="text-white text-lg">{projects_.name}</h1>
 
-<div class="w-full lg:w-1/3 rounded overflow-hidden shadow-lg m-10">
-  <img class="w-full" src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560672/Portfolio/Capture2_rvr5ht.jpg" alt="Sunset in the mountains"/>
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2">Complete Point of Sale</div>
-      <p class="text-gray-700 text-base">
-     Comprehensive web-based point of sale system with integrated thermal printers and scanners. 
- </p>
-    </div>
-  <a href="https://supremesai.co.ke/log_in/Log_in" class="w-full bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-    <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
-    <span>Load Site</span>
-  </a>
+ 
 </div>
-
-<div class="w-full lg:w-1/3 rounded overflow-hidden shadow-lg m-10">
-  <img class="w-full" src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560673/Portfolio/Capture1_xqivsd.jpg" alt="Sunset in the mountains"/>
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2">Hashtag Technologies Website</div>
-      <p class="text-gray-700 text-base">
-      Complete website demonstrating the services and goods offered at Hashtag Technologies Limited.   </p>
-    </div>
-  <a href="http://hashtagtech.co.ke/" class="w-full bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-    <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
-    <span>Visit Site</span>
-  </a>
-</div>
-<div class="w-full lg:w-1/3 rounded overflow-hidden shadow-lg m-10">
-  <img class="w-full" src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560674/Portfolio/Capture4_gyt5sw.jpg" alt="Sunset in the mountains"/>
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2">My Portfolio</div>
-      <p class="text-gray-700 text-base">
-      Complete website demonstrating the services and goods offered at Hashtag Technologies Limited.   </p>
-    </div>
-  <a href="http://hashtagtech.co.ke/" class="w-full bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-    <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
-    <span>Visit Site</span>
-  </a>
-</div>
-
-</div>
-                      </div></section>
-                  </div>
                 </div>
               </div>
             </div> : <div></div>}
