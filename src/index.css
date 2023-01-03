@@ -31,8 +31,8 @@
   }
   
   *::-webkit-scrollbar-track {
-    border-radius: 14px;
-    background-color: white;
+    /* border-radius: 14px; */
+    background-color: #2ecc71;
 
   }
   
