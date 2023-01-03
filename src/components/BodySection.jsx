@@ -76,8 +76,8 @@ const BodySection = () => {
     }
   }
   useEffect(() => {
-    console.log(projects_.name)
-  }, [projects_])
+    setProjects_ ({name:"Hashtag Technologies Website",image:"https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560673/Portfolio/Capture1_xqivsd.jpg",description:"Complete website demonstrating the services and goods offered at Hashtag Technologies Limited.",url:"http://hashtagtech.co.ke/",location:"Nanyuki,Kenya"})
+  }, [])
 
 
   return (
@@ -446,21 +446,21 @@ const BodySection = () => {
 </div> 
 <div className="flex justify-center w-full py-2 gap-2">
 
-  <a href="#item1" className="btn btn-xs" onClick={()=>{
+  <a href="#item1"  onClick={()=>{
     setProjects_ ({name:"Cedar Gardens",image:"https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560672/Portfolio/Capture_ed9ftc.jpg",description:"Complete website showcasing the services offered at Cedar Gardens and resort.",url:"https://cedargardenhotel.co.ke/",location:"Meru,Kenya"});
     }
   }
     
-    ><img src={projects_.image} className="h-10 w-10 rounded-full object-cover m-3"/></a> 
+    ><img src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560672/Portfolio/Capture_ed9ftc.jpg" className="h-8 w-8 transition-all duration-100 ease-in-out hover:h-10 hover:w-10 rounded-full object-cover m-3"/></a> 
   <a href="#item2"  onClick={()=>{
     setProjects_ ({name:"Hashtag Technologies Website",image:"https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560673/Portfolio/Capture1_xqivsd.jpg",description:"Complete website demonstrating the services and goods offered at Hashtag Technologies Limited.",url:"http://hashtagtech.co.ke/",location:"Nanyuki,Kenya"});
-    } }><img src={projects_.image} className="h-10 w-10 rounded-full object-cover m-3"/></a> 
+    } }><img src='https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560673/Portfolio/Capture1_xqivsd.jpg' className="h-8 w-8 transition-all duration-100 ease-in-out hover:h-10  hover:w-10 rounded-full object-cover m-3"/></a> 
   <a href="#item3" onClick={()=>{
       setProjects_ ({name:"Complete Web Based Point of Sale",image:"https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560672/Portfolio/Capture2_rvr5ht.jpg",description:" comprehensive web-based point of sale system with integrated thermal printers and scanners.",url:"https://supremesai.co.ke/system_two/Log_in/",location:"Nairobi,Kenya"});
-      }} ><img src={projects_.image} className="h-10 w-10 rounded-full object-cover m-3"/></a> 
+      }} ><img src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560672/Portfolio/Capture2_rvr5ht.jpg" className="h-8 w-8 transition-all duration-100 ease-in-out hover:h-10 hover:w-10 rounded-full object-cover m-3"/></a> 
   <a href="#item4" className="rounded-full h-[10] w-[10] bg-cover" onClick={()=>{
       setProjects_ ({name:"Inventory Management(Invoice,Delivery & Receipt Generator",image:"https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560674/Portfolio/Capture3_yqki9n.jpg",description:"Complete website showcasing the services offered at Cedar Gardens and resort.",url:"hhttps://supremesai.co.ke/log_in/Log_in",location:"Nairobi,Kenya"});
-      }} ><img src={projects_.image} className="h-10 w-10 rounded-full object-cover m-3"/></a>
+      }} ><img src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1672560674/Portfolio/Capture3_yqki9n.jpg" className="h-8 w-8 transition-all duration-100 ease-in-out hover:h-10 hover:w-10 rounded-full object-cover m-3"/></a>
 </div>
 <div className="w-100% flex flex-col-reverse items-center align-center justify-center text-[]" >
 <a target="_blank" rel="noopener noreferrer" href={projects_.url} className="btn  gap-2 m-5 p-1 h-[50px] rounded-[3px] btn-sm text-xs w-[20%] bg-white text-[#222228] border-1 ">
