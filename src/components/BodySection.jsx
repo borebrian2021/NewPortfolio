@@ -83,7 +83,7 @@ const BodySection = () => {
   return (
     <div className="transition-all duration-300 ease-in-out grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 bg-[#222228]">
       <div className="flex justify-center h-[100%] w-[100%] col-span-1  items-center text-center align-right">
-        <div className="w-[100%] h-[500px] flex justify-center items-center text-center align-center">
+        <div className="w-[100%] h-[550px] flex justify-center items-center text-center align-center">
           <div className="w-[90%] h-[85%] rounded-[5px]  bg-[#31313a]  ">
             <div className="w-[100%] relative h-[30%] bg-[#31313a]  bg-url  rounded-md border-tweaks">
               <img
@@ -95,27 +95,26 @@ const BodySection = () => {
                 src="https://res.cloudinary.com/dqab6gg7d/image/upload/v1670939243/Portfolio/DSC_7989_xdncll.jpg"
               />
             </div>
-            <p className="text-white mt-[15%] text-1xl">Brian Koskei</p>
-            <p className="text-orange-500 text-[12px] font-sans">Frontend Developer</p>
-            <p className="text-white text-[12px] m-3 font-">
-              I am a gifted individual.I work hard to improve and even deliver
-              the finest possible outcomes for my industry. I chose programming
-              to improve my problem-solving abilities and to share my ideas with
-              the rest of the world through my never-ending inventiveness. I'm a
-              passionate, outspoken, multi-talented individual that learns
-              quickly.{" "}
-            </p>
-            <button className="btn gap-2 m-5 p-1 h-[50px] rounded-[3px] btn-sm text-xs w-[70%] bg-[#d35a2e] border-1 border-[#31313a]">
+            <p className="text-white text-[12px] mt-[40px]">Brian Koskei Kimutai</p>
+            <p className="text-white text-[12px]">bkimutai2021@gmail.com</p>
+            <p className="text-white text-[12px]">05 May,1997</p>
+
+              <p className="text-white text-[12px]">+254712035642</p>
+            <p className="text-white text-[12px]">Nairobi, Kenya</p>
+
+            <p className="text-[#2ECC71] text-[12px] font-sans mt-2">Fullstack Developer</p>
+            
+            <button className="btn gap-2 mt-5 p-1 h-[40px] text-[10px]   hover:bg-[#239B56] btn-sm   w-[40%] bg-[#2ECC71] rounded-[50px]  ">
               Preview CV
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
+              </svg> */}
 
             </button>
             <div className="w-[100%] flex  m-[3px] justify-center ">
               <div className="w-[80%] text-white flex grid-col-5 h-[70px] m-[3px]">
-
+            
               </div>
             </div>
           </div>
@@ -132,23 +131,24 @@ const BodySection = () => {
           </div>
           {
             about ? <div className="w-[100%] p-[20px] rounded-[3px]   text-center justify-center flex  flex-col-reverse align-center items-center ">
-              <button className="btn gap-2 m-5 rounded-[3px] p-[1] h-[50px] bg-[#d35a2e] btn-sm text-xs ">
-                Hire me
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+            <button className="btn gap-2 mt-5 p-1 h-[40px] text-[10px]   hover:bg-[#239B56] btn-sm   lg:w-[10%] bg-[#2ECC71] sm:w-40% md:w-[30%] rounded-[50px]  ">
+              Hire me
+              {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg> */}
 
-              </button>
-              <p className="text-white">Nairobi, Kenya</p>
-              <p className="text-white">+254712035642</p>
-              <p className="text-white">bkimutai2021@gmail.com</p>
-              <p className="text-white">
-                Building a successful product is a challenge.I am highly
-                energetic in user experience design, interfaces and web
-                development.
-              </p>
-
+            </button>
+       
+             
+              <p className="text-white text-[12px] m-3 font-">
+              I am a gifted individual.I work hard to improve and even deliver
+              the finest possible outcomes for my industry. I chose programming
+              to improve my problem-solving abilities and to share my ideas with
+              the rest of the world through my never-ending inventiveness. I'm a
+              passionate, outspoken, multi-talented individual that learns
+              quickly.{" "}
+            </p>
               <div className=" grid lg:grid-cols-3 md:grid-col-3 sm:grid-col-2 grid-col-2 w-[100%]">
                 <div className="w-[100%] grid lg:grid-cols-2 md:grid-col-2 sm:grid-col-2 grid-col-2">
                   <div className="text-left flex atems-left">  <svg
@@ -215,22 +215,25 @@ const BodySection = () => {
                         </div>
                       </div>
                     </div>
-                  </div><div class='flex items-center justify-center '>
-                    <div class="rounded-[3px] border p-5 shadow-md w-9/12 bg-[#e5e7eb]">
+                    
+                  </div>
+                  <div class='flex items-center justify-center '>
+                  <div class="rounded-[3px] border p-5 shadow-md w-9/12 bg-[#e5e7eb]">
                       <div class="flex w-full items-center justify-between border-b pb-3">
                         <div class="flex items-center space-x-3">
                           <div class="h-8 w-8 rounded-full bg-slate-400 bg-cover bg-[url('https://netstorage-tuko.akamaized.net/images/192d4a93a09a17e6.png?imwidth=720')]"></div>
-                          <div class="text-lg font-bold text-slate-700 custome_font">Moringa Scool</div>
+                          <div class="text-lg font-bold text-slate-700 custome_font">Moringa School</div>
                         </div>
 
                       </div>
 
                       <div class="mt-4 mb-6">
 
-                        <div class="text-sm text-neutral-600">
+                        <div class="text-xs text-neutral-600">
                           I took an hybrid  course in software engineering, I develop  hard and soft abilities. Being a full stack developer is one of the best skills I've acquired. I gained soft skills like leadership, collaboration, and emotional intelligence, among others.
 
                         </div>
+                      
                       </div>
 
                       <div>
@@ -241,11 +244,16 @@ const BodySection = () => {
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
                               </svg>
 
-                              <span>April,2022- November,2022</span>
+                              <span className="text-[12px]">Apr,2022- Nov,2022</span>
                             </div>
+                            <button className="btn gap-2 mt-5 p-1 h-[40px] text-[10px]  border-none hover:bg-[#239B56] btn-sm   lg:w-[40%] bg-[#2ECC71] sm:w-40% md:w-[30%] rounded-[50px]  ">
+                            Certificate
+          
 
+                           </button>
                           </div>
                         </div>
+                       
                       </div>
                     </div>
                   </div>
